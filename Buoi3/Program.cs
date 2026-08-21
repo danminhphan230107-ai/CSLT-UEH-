@@ -34,6 +34,8 @@ namespace Buoi3
             int div = a / b;
             int mod = a % b;
 
+
+
             Console.WriteLine($"Tong = {sum} \nHieu = {hieu} \nTich = {mul} \nThuong = {div} \nSo du = {mod}");
 
         }
