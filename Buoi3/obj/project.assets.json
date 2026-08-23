@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CODE/CSLT-UEH-/CSLT-UEH-/Buoi2/Buoi2.csproj",
-      "projectName": "Buoi2",
-      "projectPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CODE/CSLT-UEH-/CSLT-UEH-/Buoi2/Buoi2.csproj",
+      "projectUniqueName": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CODE/CSLT-UEH-/CSLT-UEH-/Buoi3/Buoi3.csproj",
+      "projectName": "Buoi3",
+      "projectPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CODE/CSLT-UEH-/CSLT-UEH-/Buoi3/Buoi3.csproj",
       "packagesPath": "/Users/dannie/.nuget/packages/",
-      "outputPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CODE/CSLT-UEH-/CSLT-UEH-/Buoi2/obj/",
+      "outputPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CODE/CSLT-UEH-/CSLT-UEH-/Buoi3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dannie/.nuget/NuGet/NuGet.Config"
