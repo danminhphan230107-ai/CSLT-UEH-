@@ -52,7 +52,17 @@ namespace CSLT
             decimal tienTong = tienDien + VAT;
             Console.WriteLine($"Chỉ số điện tiêu thụ: {soKw} \nTiền điện chưa thuế: {tienDien:#,##0} VND \nTiền thuế: {VAT} \nTiền điện đã thuế: {tienTong:#,##0} VND");
             
-
+            // Bai 2
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            double chieuCao;
+            double canNang;
+            double chiSoBMI;
+            Console.WriteLine("Nhập chỉ số chiều cao tính bằng mét");
+            chieuCao = double.Parse(Console.ReadLine());
+            Console.WriteLine("Nhập chỉ số cân nặng tính bằng kg");
+            canNang = double.Parse(Console.ReadLine());
+            chiSoBMI = canNang/(chieuCao*chieuCao);
+            
 
         }
     }
