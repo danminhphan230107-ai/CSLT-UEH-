@@ -1,0 +1,15 @@
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/bin/Debug/net10.0/BT Ex2
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/bin/Debug/net10.0/BT Ex2.deps.json
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/bin/Debug/net10.0/BT Ex2.runtimeconfig.json
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/bin/Debug/net10.0/BT Ex2.dll
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/bin/Debug/net10.0/BT Ex2.pdb
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.AssemblyInfoInputs.cache
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.AssemblyInfo.cs
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.csproj.CoreCompileInputs.cache
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.sourcelink.json
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.dll
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/refint/BT Ex2.dll
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.pdb
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/BT Ex2.genruntimeconfig.cache
+/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex2/obj/Debug/net10.0/ref/BT Ex2.dll
