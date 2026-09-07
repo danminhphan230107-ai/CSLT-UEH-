@@ -12,7 +12,7 @@ namespace CSLT
             string chon = Console.ReadLine();
             switch (chon)
             {
-                case "0": Bai_1(); Bai_2(); Bai_3(); break;
+                case "0": Bai_1(); Bai_2(); Bai_3(); Bai_4(); break;
                 case "1": Bai_1(); break;
                 case "2": Bai_2(); break;
                 case "3": Bai_3(); break;
