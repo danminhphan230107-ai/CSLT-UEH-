@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BT Ex2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcfae97ee17cd7dd9ce844f1c3e87a5fa0e6bbc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+beb7ebe2e4bee7af4ec1178780f782d64b1daaf5")]
 [assembly: System.Reflection.AssemblyProductAttribute("BT Ex2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BT Ex2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Runtime.ConstrainedExecution;
 namespace CSLT
 {
     class BTEx2
@@ -12,12 +14,13 @@ namespace CSLT
             string chon = Console.ReadLine();
             switch(chon)
             {
-                case "0": Bai1(); Bai2(); Bai3(); Bai4(); Bai5(); break;
+                case "0": Bai1(); Bai2(); Bai3(); Bai4(); Bai5(); Bai6(); break;
                 case "1": Bai1(); break;
                 case "2": Bai2(); break;
                 case "3": Bai3(); break;
                 case "4": Bai4(); break;
-                case "5": Bai5(); break; 
+                case "5": Bai5(); break;
+                case "6": Bai6(); break; 
             }
 
         }
@@ -231,7 +234,52 @@ namespace CSLT
         Console.WriteLine($"Điểm GPA thang 4: {scale4}");
         Console.WriteLine($"Xếp loại học lực: {xepLoai}");
     }
+    // Bai 6
+    static void Bai6()
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine("Hãy nhập tên của bạn:");
+            string TenTho = Convert.ToString(Console.ReadLine());
+            string[] TachTenTho = TenTho.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            int n = 0;
+            foreach(string x in TachTenTho)
+            {
+                TachTenTho[n] = x.Substring(0,1).ToUpper() + x.Substring(1).ToLower(); //Substring(startIndex, length) - lấy từ vị trí startIndex, lấy đúng length ký tự
+                n++;
+            }
+            int ChieuDaiTen = TachTenTho.Length;
+            string Ho = TachTenTho[0];
+            string Ten = TachTenTho[ChieuDaiTen-1];
+            string TenDem = "";
+            for ( int i = 1; i <= ChieuDaiTen - 2; i++ )
+            {
+                if (i > 1) TenDem += " ";
+                TenDem += TachTenTho[i];
+            }
+            // Normalize(NormalizationForm.FormD) — tách chữ ra khỏi dấu
+            string TachTenRaKhoiDau = Ho + TenDem + Ten;
+            string TenKoDau = "";
+            TachTenRaKhoiDau = TachTenRaKhoiDau.Normalize(System.Text.NormalizationForm.FormD).Replace(" ","").ToLower().Trim();
+            Console.WriteLine(TachTenRaKhoiDau);
+            // NonSpacingMark là kiểu dấu, ko phải ký tự chữ
+            foreach (char c in TachTenRaKhoiDau)
+            {
+                var KieuTxt = System.Globalization.CharUnicodeInfo.GetUnicodeCategory(c); // Lấy kiểu của kí tự
+                if ( KieuTxt != System.Globalization.UnicodeCategory.NonSpacingMark)
+                {
+                    TenKoDau += c;
+                }
+            }
+            Console.WriteLine(TenKoDau);
+            TenKoDau = TenKoDau.Replace("đ", "d").Replace("Đ","D"); // Ko thể lọc đc đ và Đ vì với Unicode, gạch ngang giữa chữ "đ" không được coi là một "dấu" riêng biệt như dấu mũ/dấu sắc — nó là một phần cố định của chính chữ cái đó,
+            string emailTen = TenKoDau.Substring(TenKoDau.Length-Ten.Trim().Length);
+            Console.WriteLine(emailTen);
+            string emailDem = TenKoDau.Substring(0,TenKoDau.Length-Ten.Trim().Length);
+            Console.WriteLine(emailDem);
+            string username = $"{emailTen}.{emailDem}";
+            string emailUser = username + "@company.edu.vn";
+            Console.WriteLine($"Họ tên chuẩn hoá: {Ho} {TenDem} {Ten} \nHọ: {Ho} | Tên đệm: {TenDem} | Tên: {Ten} \nUsername tạo tự động: {username} \nEmail cấp phát: {emailUser}");   
+
+        }
     }
 }
-
-
