@@ -5,15 +5,9 @@ namespace CSLT
 {
     class BTEx2
     {
-        enum CurrencyType
-        {
-            USD = 1,
-            EUR = 2,
-            JPY = 3,
-            GBP = 4}
-        
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("Nhập thứ tự bài tập muốn chạy \nChọn 0 để chạy tất cả");
             string chon = Console.ReadLine();
             switch(chon)
@@ -27,10 +21,9 @@ namespace CSLT
             }
 
         }
+    // Bai 1
     static void Bai1()
     {
-            // Bai 1
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("Nhập chỉ số điện cũ");
             float chiSoCu = float.Parse(Console.ReadLine());
             float chiSoMoi;
@@ -78,10 +71,9 @@ namespace CSLT
             
     }
 
+    // Bai 2
     static void Bai2()
     {
-                    // Bai 2
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             double chieuCao;
             double canNang;
             double chiSoBMI;
@@ -112,10 +104,16 @@ namespace CSLT
 
             Console.WriteLine($"Chỉ số BMI của bạn: {chiSoBMI:F2} \nPhân loại sức khoẻ: {phanLoai} \nKhuyên dùng: Cân nặng lý tưởng của bạn là từ {canMin:F2} Kg đến {canMax:F2} Kg");
     }
+    enum CurrencyType
+        {
+            USD = 1,
+            EUR = 2,
+            JPY = 3,
+            GBP = 4}
 
+    // Bai 3
     static void Bai3()
     {
-                    // Bai 3
             double soTien = 0;
             int key = 0;
             double phiDichVu = 0;
@@ -149,12 +147,11 @@ namespace CSLT
 
     }
 
+    // Bai 4
     static void Bai4()
     {
-            // Bai 4
-    
     Console.WriteLine("Nhập ngày sinh của bạn theo dịnh dạng dd/mm/yyyy ");
-    string input = Console.ReadLine();
+    string input = Convert.ToString(Console.ReadLine());
     // DateTime ngaySinh = DateTime.ParseExact( input, "dd/mm/yyyy", CultureInfo.InvariantCulture); 
     if (DateTime.TryParseExact(
         input,
@@ -172,13 +169,13 @@ namespace CSLT
             soTuoi--; // Trừ 1 tuổi vì chưa đến sinh nhật
         }
         DateTime sinhNhatKeTiep;
-        if (sinhNhatNamNay >= homNay)
+        if (sinhNhatNamNay >= homNay) // Nếu ngày sinh chưa đến, thời gian sau lớn hơn thời gian trước
         {
             sinhNhatKeTiep = sinhNhatNamNay; // Nếu chưa qua sinh nhật thì lấy sinh nhật năm nay 
         }
         else
         {
-            sinhNhatKeTiep = sinhNhatNamNay.AddYears(1); // Nếu qua sinh nhật rồi thì lấy sinh nhật nă, sau
+            sinhNhatKeTiep = sinhNhatNamNay.AddYears(1); // Nếu qua sinh nhật rồi thì lấy sinh nhật năm sau
         }
         int soNgaySong = (homNay - ngaySinh.Date).Days;
         int ngayConLai = (sinhNhatKeTiep - homNay).Days;
@@ -191,6 +188,7 @@ namespace CSLT
     }
     }
 
+    // Bai 5
     enum GradLetter
         {
             F,
@@ -232,8 +230,6 @@ namespace CSLT
         Console.WriteLine($"Điểm chữ quy đổi: {letter}");
         Console.WriteLine($"Điểm GPA thang 4: {scale4}");
         Console.WriteLine($"Xếp loại học lực: {xepLoai}");
-
-
     }
     }
 }
