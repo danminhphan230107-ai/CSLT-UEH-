@@ -8,7 +8,7 @@ using System.Runtime.Intrinsics.X86;
 using System.Text;
 namespace CSLT
 {
-    class BT_Ex20
+    class BT_Ex5
     {
         static int Tinh_Tong(int a, int b)
         {
