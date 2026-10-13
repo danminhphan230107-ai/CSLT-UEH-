@@ -8,22 +8,12 @@ namespace CSLT
         static void Main(string[] args)
         {
             Console.OutputEncoding=System.Text.Encoding.UTF8;
-            Console.WriteLine($"Nhập thứ tự bài muốn chạy \nNhập \"0\" để chọn chạy tất cả");
-            string chon = Console.ReadLine();
-            switch (chon)
-            {
-                case "0": Bai_1(); Bai_2(); Bai_3(); Bai_4(); break;
-                case "1": Bai_1(); break;
-                case "2": Bai_2(); break;
-                case "3": Bai_3(); break;
-                case "4": Bai_4(); break;
-            }
+            Bai_1(5); Bai_2(new int[] {10,5,4}); Bai_3(5,5,5); Bai_4(3, -4);
         }
 
-        static void Bai_1()
+        static void Bai_1(int soCanCheck)
         {
-            Console.WriteLine("Nhập số muốn kiểm tra chẵn lẻ");
-            int soCanCheck = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Số muốn kiểm tra chẵn lẻ là {soCanCheck}");
             int soDu = soCanCheck%2;
             if(soDu == 1)
             {
@@ -34,10 +24,8 @@ namespace CSLT
                 Console.WriteLine($"{soCanCheck} là số chẵn");
             }
         }
-        static void Bai_2()
+        static void Bai_2(int[] soCanCheck)
         {
-            Console.WriteLine("Nhập ba số a, b, c lần lượt là");
-            int[] soCanCheck = Array.ConvertAll(Console.ReadLine().Split(new char[] {' ',','}, StringSplitOptions.RemoveEmptyEntries), int.Parse); //Split dùng để tách kí tự ra
             int soMax = 0;
             foreach (int kiemTra in soCanCheck)
             {
@@ -49,14 +37,8 @@ namespace CSLT
             Console.WriteLine($"Số lớn nhất trong các số đã nhập là {soMax}");
         }
 
-        static void Bai_3()
+        static void Bai_3(double a, double b, double c)
         {
-            Console.WriteLine("Nhập độ dài ba cạnh a, b, c của tam giác lần lượt là");
-            double[] canh = Array.ConvertAll(Console.ReadLine().Split(new char[] {' ',','}, StringSplitOptions.RemoveEmptyEntries), double.Parse);
-            double a = canh[0];
-            double b = canh[1];
-            double c = canh[2];
-
             if (a+b > c || a+c > b || b+c > a)
             {
                 if (a==b && b==c && a==c)
@@ -78,12 +60,8 @@ namespace CSLT
             }
         }
 
-        static void Bai_4()
+        static void Bai_4(int x, int y)
         {
-            Console.WriteLine($"Nhập toạ độ (x,y) lần lượt là");
-            int[] toaDo = Array.ConvertAll(Console.ReadLine().Split(new char[] {' ', ','}, StringSplitOptions.RemoveEmptyEntries), int.Parse);
-            int x = toaDo[0];
-            int y = toaDo[1];
             if (x>0)
             {
                 if (y>0)
