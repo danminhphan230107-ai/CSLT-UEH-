@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex3/BT_Ex3.csproj",
+      "projectUniqueName": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex3/BT_Ex3.csproj",
       "projectName": "BT_Ex3",
-      "projectPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex3/BT_Ex3.csproj",
+      "projectPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex3/BT_Ex3.csproj",
       "packagesPath": "/Users/dannie/.nuget/packages/",
-      "outputPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex3/obj/",
+      "outputPath": "/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dannie/.nuget/NuGet/NuGet.Config"
