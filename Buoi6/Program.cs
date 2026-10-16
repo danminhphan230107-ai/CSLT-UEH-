@@ -34,6 +34,9 @@ namespace CSLT
             Console.WriteLine("Các số nguyên tố của Array ");
             HashSet<int> PrimeNums = TimSoNguyenTo(RandomJagged);
             foreach(int c in PrimeNums) Console.Write(c + " ");
+
+            if(TimSo(RandomJagged, 5)) Console.WriteLine("\nCó số cần tìm");
+            else{ Console.WriteLine("\nKhông có số cần tìm");}
         }
 
         public static int[][] JaggedArray()
@@ -110,6 +113,18 @@ namespace CSLT
                 if ( n%j == 0 ) return false;
             }
             return true;
+        }
+
+        public static bool TimSo(int[][] arrs, int SoCanTim)
+        {
+            for( int i = 0; i < arrs.Length; i++ )
+            {
+                for ( int j = 0; j < arrs[i].Length; j++ )
+                {
+                    if (SoCanTim == arrs[i][j]) return true;
+                }
+            }
+            return false;
         }
     }
 }
