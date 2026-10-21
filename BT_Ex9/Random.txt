@@ -1,0 +1,5 @@
+Hello World 2026
+Lap trinh C# vui lam, hoc 3 tieng moi ngay!
+UEH - Data Science K51
+Hom nay toi hoc ve File va Directory trong C#
+Mat khau cua toi la abc123, dung nhan ai biet nhe
