@@ -15,11 +15,14 @@ namespace CSLT
             DocFile(DuongDan);
             ReadTheFirstLine(FileCoDong);
             ReadTheLastLine(@"/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex8/BaiLam", "Bai_Tap_TumLum");
+            ReadNLastLine(DuongDan, 2);
+            ReadSpecificLine(DuongDan, 2);
+            CountLines(DuongDan);
             CreateFileArray(DuongDan, new string[]{"An", "Bình", "Phú", "Lâm"});
             GhiDe(DuongDan, "Nội dung cần phải được Append");
             CopyFile(DuongDan, "Bai_2");
+            GetStructure(@"/Users/dannie/Documents/KỲ 3/CS LẬP TRÌNH/CSLT-UEH-/BT_Ex8");
             
-
         }
 
         static string TaoFileRong(string TenFolder, string TenFile)
@@ -111,6 +114,53 @@ namespace CSLT
             return DongCuoi;
         }
 
+        static void ReadNLastLine(string TenFileDuongDan, int n)
+        {
+            string[] CacDong = File.ReadAllLines(TenFileDuongDan);
+            Console.WriteLine("n dòng cuối là: ");
+            for (int i = CacDong.Length - n; i < CacDong.Length; i++)
+                Console.WriteLine(CacDong[i]);
+        }
 
+        static void ReadSpecificLine(string TenFileDuongDan, int n)
+        {
+            string[] CacDong = File.ReadAllLines(TenFileDuongDan);
+            Console.WriteLine($"Dòng thứ {n} là: " + CacDong[n-1]);
+        }
+
+        static int CountLines(string TenFileDuongDan)
+        {
+            string[] CacDong = File.ReadAllLines(TenFileDuongDan);
+            int SoDong = CacDong.Length;
+            Console.WriteLine($"Số dòng trong file là: " + SoDong);
+            return SoDong;
+        }
+
+        static void GetStructure(string TenFolder)
+        {
+            if(!Directory.Exists(TenFolder))
+            {
+                Console.WriteLine("Thư mục không tồn tại");
+                return;
+            }
+            Console.WriteLine("Thư mục " + Path.GetFileName(TenFolder));
+            DetailStructure(TenFolder, " ");
+        }
+
+        static void DetailStructure(string TenFolder, string KhoangCachThuLe)
+        {
+            foreach (string ThuMucCon in Directory.GetDirectories(TenFolder))
+            {
+                Console.WriteLine(KhoangCachThuLe + Path.GetFileName(ThuMucCon));
+                DetailStructure(ThuMucCon, KhoangCachThuLe + "   "); //Đệ quy, gọi lại chính nó 
+            }
+
+            //Chạy hết thư mục rồi thì bỏ qua và chạy foreach ở dưới để lấy tên file
+
+            foreach (string TenFile in Directory.GetFiles(TenFolder)) //Bây giờ Tenfolder đã đc gán là ThuMucCon
+            {
+                Console.WriteLine(KhoangCachThuLe + Path.GetFileName(TenFile));
+            }
+        }
     }
 }
