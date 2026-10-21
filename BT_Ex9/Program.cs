@@ -84,7 +84,7 @@ namespace CSLT
                 }
             }
 
-            Console.WriteLine("Vị trí dòng và cột");
+            Console.WriteLine("\n" + "Vị trí dòng và cột");
             for ( int i = 0; i< 36; i ++ )
             {
                 if (ViTri[i].Length == 0) continue;
